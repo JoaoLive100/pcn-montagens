@@ -16,18 +16,31 @@ window.addEventListener('DOMContentLoaded', event => {
             return;
         }
         if (window.scrollY === 0) {
-            navbarCollapsible.classList.remove('navbar-shrink')
+            navbarCollapsible.classList.remove('navbar-shrink');
+
         } else {
-            navbarCollapsible.classList.add('navbar-shrink')
+            navbarCollapsible.classList.add('navbar-shrink');
         }
 
     };
+
+    //Red color on menu toggle function
+    var removeRed = function () {
+
+        const btnMenu = document.body.querySelector('#btnMenu');
+        if (btnMenu.ariaExpanded === 'true') {
+            btnMenu.classList.add('vermelho');
+        } else {
+            btnMenu.classList.remove('vermelho');
+        }   
+    }
 
     // Shrink the navbar 
     navbarShrink();
 
     // Shrink the navbar when page is scrolled
     document.addEventListener('scroll', navbarShrink);
+    document.addEventListener('click', removeRed);
 
     //  Activate Bootstrap scrollspy on the main nav element
     const mainNav = document.body.querySelector('#mainNav');
