@@ -10905,6 +10905,32 @@ p {
   border-radius: 100%;
 }
 
+.btn-menu {
+  border: none;
+  color: white;
+}
+
+.btn-menu:focus {
+  box-shadow: none;
+}
+
+.joao-social {
+  width: 1.8rem;
+  height: 1.8rem;
+  border-radius: 100%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #ff0400 !important;
+  opacity: 75%;
+  padding-bottom: 10px;
+}
+
+.joao-social:hover {
+  color: white !important;
+  background-color: #ff0400;
+}
+
 #mainNav {
   padding-top: 1rem;
   padding-bottom: 1rem;
@@ -11314,7 +11340,7 @@ header.masthead .masthead-heading {
 
 section#contact {
   background-color: #212529;
-  background-image: url("../assets/img/map-image.png");
+  background-image: url("../assets/img-prod/logos/map-image.png");
   background-repeat: no-repeat;
   background-position: center;
 }
@@ -11373,7 +11399,7 @@ section#contact form#contactForm :-ms-input-placeholder {
 }
 
 .vermelho {
-  color: #ff0400;
+  color: #ff0400 !important;
 }
 
 .projects-section {
