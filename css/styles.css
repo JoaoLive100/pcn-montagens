@@ -11292,7 +11292,7 @@ header.masthead .masthead-heading {
 }
 
 .img-brand {
-  height: 2.75rem;
+  height: 5rem;
 }
 
 .map {
@@ -11306,9 +11306,9 @@ header.masthead .masthead-heading {
   border: 0;
 }
 
-@media (max-width: 992px) {
+@media (max-width: 767px) {
   .map {
-    height: 75%;
+    padding-top: 50px !important;
   }
 }
 
