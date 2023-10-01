@@ -64,4 +64,24 @@ window.addEventListener('DOMContentLoaded', event => {
         });
     });
 
+    document.getElementById('contactForm').addEventListener('submit', function (e) {
+        var email = document.getElementById('email');
+        var email = document.getElementById('email');
+        var email = document.getElementById('email');
+        e.preventDefault();
+
+        Email.send({
+            Host : "smtp.elasticemail.com",
+            Username : "pcnmontagens@gmail.com",
+            Password : "1C2CC17C24FBBE88BAC557FA563DDED1032D",
+            To : email.value,
+            To : "pcnmontagens@gmail.com",
+            From : email.value,
+            Subject : "This is the subject",
+            Body : "And this is the body"
+        }).then(
+          message => alert(message)
+        );
+    });
+
 });
