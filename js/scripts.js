@@ -66,22 +66,24 @@ window.addEventListener('DOMContentLoaded', event => {
 
     document.getElementById('contactForm').addEventListener('submit', function (e) {
         var email = document.getElementById('email');
-        var email = document.getElementById('email');
-        var email = document.getElementById('email');
+        var nome = document.getElementById('nome');
+        var telefone = document.getElementById('telefone');
+        var mensagem = document.getElementById('mensagem');
         e.preventDefault();
 
         Email.send({
-            Host : "smtp.elasticemail.com",
-            Username : "pcnmontagens@gmail.com",
-            Password : "1C2CC17C24FBBE88BAC557FA563DDED1032D",
-            To : email.value,
-            To : "pcnmontagens@gmail.com",
-            From : email.value,
-            Subject : "This is the subject",
-            Body : "And this is the body"
-        }).then(
-          message => alert(message)
-        );
+            SecureToken : "a3d7faa1-30fe-4cd7-a239-d91d34551e10",
+            To : "foxyespcs@gmail.com",
+            From : "foxyespcs@gmail.com",
+            Subject : "Mensagem de " + nome.value,
+            Body : "Nome: " + nome.value + "<br/>" + "Email: " + email.value + "<br/>" + "Telefone: " + telefone.value + "<br/>" + "Mensagem: " + mensagem.value + "<br/>"
+        }).then(function(message) {
+            if (message == 'OK') {
+                alert('Sua mensagem foi enviada com sucesso!');
+            } else {
+                alert('Sua mensagem não foi enviada, tente novamente!');
+            }
+        });
     });
-
+//To : email.value,
 });
