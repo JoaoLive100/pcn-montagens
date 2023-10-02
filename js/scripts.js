@@ -72,7 +72,7 @@ window.addEventListener('DOMContentLoaded', event => {
         e.preventDefault();
 
         Email.send({
-            SecureToken : "a3d7faa1-30fe-4cd7-a239-d91d34551e10",
+            SecureToken : "55c86a1d-3c38-42fe-934d-bf51b6f299fe",
             To : "pcnmontagens@gmail.com",
             From : "pcnmontagens@gmail.com",
             Subject : "Mensagem de " + nome.value,
